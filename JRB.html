@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <head>
+    <meta charset='utf-8'>
+    <title>JR BRASIL - REPRESENTAÇÕES E SERVIÇOS</title>
+
+    <!-- Adicione a linha abaixo para definir a logo na aba do navegador -->
+    <link rel="icon" href="JRBRASIL LOGO.png">
+    
+    <!-- Restante do seu código original (links CSS, fontes, etc) -->
+</head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <title>JR BRASIL - REPRESENTAÇÕES E SERVIÇOS</title>
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header class="header" id="topo">
+        <section class="topo-container">
+            <a href="#home" class="logo">
+                <!-- Usando a logo enviada -->
+                <img width="220" src="logo.png" alt="Logo JR Brasil">
+            </a>
+
+            <nav class="navbar">
+                <a href="#home" class="nav-item">
+                    <img width="40" height="40" src="https://img.icons8.com/ios-filled/0078E7/home.png" alt="home" />
+                    <span>INÍCIO</span>
+                </a>
+                <a href="#sobre" class="nav-item">
+                    <img width="40" height="40" src="https://img.icons8.com/fluency/48/about.png" alt="about" />
+                    <span>SOBRE NÓS</span>
+                </a>
+                <a href="#contato" class="nav-item">
+                    <img width="40" height="40" src="https://img.icons8.com/ios-filled/0078E7/phone-disconnected.png" alt="phone-disconnected" />
+                    <span>CONTATO</span>
+                </a>
+            </nav>
+        </section>
+    </header>
+
+    <!-- SEÇÃO HOME / BANNER -->
+    <main class="home-container" id="home">
+        <!-- Inserindo o banner fornecido -->
+        <img src="JRB BANNER SITWE.jpg" alt="Banner JR Brasil" class="banner-img">
+        
+        <div class="content">
+            <h1>Excelência em Representação Comercial</h1>
+            <p>Conectando as melhores soluções do mercado aos nossos clientes com dedicação, profissionalismo e resultados expressivos.</p>
+            <a href="#sobre" class="btn">Conheça nossa empresa</a>
+        </div>
+    </main>
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section id="sobre" class="sobre-section">
+        <h2 class="section-title">Sobre Nós</h2>
+        <p class="sobre-desc">A <strong>JR BRASIL</strong> é uma empresa dedicada a construir pontes sólidas entre indústrias e o mercado. Nosso compromisso é entregar valor através de um serviço de representação ético e focado em resultados.</p>
+        
+        <div class="cards-container">
+            <!-- Card Foco -->
+            <div class="card">
+                <img width="64" height="64" src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/center-direction.png" alt="Foco"/>
+                <h3>Nosso Foco</h3>
+                <p>Proporcionar um atendimento personalizado e estratégico, entendendo as necessidades de cada cliente para entregar os melhores negócios.</p>
+            </div>
+            
+            <!-- Card Visão -->
+            <div class="card">
+                <img width="64" height="64" src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/visible.png" alt="Visão"/>
+                <h3>Nossa Visão</h3>
+                <p>Ser a principal e mais confiável referência nacional no segmento de representação comercial, reconhecida pela qualidade e inovação.</p>
+            </div>
+            
+            <!-- Card Objetivo -->
+            <div class="card">
+                <img width="64" height="64" src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/goal.png" alt="Objetivo"/>
+                <h3>Nosso Objetivo</h3>
+                <p>Construir parcerias duradouras, garantindo a expansão, a satisfação e o crescimento contínuo de nossas representadas e clientes parceiros.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <a href="#topo" class="back-to-top" title="Voltar ao início">
+        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/collapse-arrow.png" alt="Voltar ao início"/>
+    </a>
+<!-- RODAPÉ / CONTACTO -->
+    <footer class="footer" id="contato">
+        <div class="footer-content">
+            <h3>JR BRASIL - REPRESENTAÇÕES E SERVIÇOS</h3>
+            <p>Entre em contacto connosco para impulsionar os seus negócios.</p>
+            
+            <div class="contato-info">
+                <p>📞 <strong>Telefone:</strong> (XX) XXXX-XXXX</p>
+                <p>✉️ <strong>E-mail:</strong> contato@jrbrasil.com.br</p>
+                <p>📍 <strong>Endereço:</strong> A sua morada comercial aqui</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 JR Brasil Representações e Serviços. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+<!-- SCRIPT PARA O BOTÃO VOLTAR AO TOPO -->
+    <script>
+        const btnTopo = document.querySelector('.back-to-top');
+
+        // Faz o botão aparecer ao rolar a página
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btnTopo.classList.add('mostrar');
+            } else {
+                btnTopo.classList.remove('mostrar');
+            }
+        });
+
+        // Efeito de rolagem lenta da página para cima
+        btnTopo.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const startPosition = window.pageYOffset;
+            const distance = -startPosition;
+            const duration = 1200; // Tempo da rolagem em milissegundos (1200 = 1.2 segundos). Aumente para deixar ainda mais lento.
+            let start = null;
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                
+                // Cálculo matemático para um efeito suave (acelera no início e freia no final)
+                const fraction = Math.min(progress / duration, 1);
+                const easeInOut = fraction < 0.5 ? 2 * fraction * fraction : -1 + (4 - 2 * fraction) * fraction;
+                
+                window.scrollTo(0, startPosition + distance * easeInOut);
+                
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+        });
+    </script>
+</body>
+</body>
+</html>
